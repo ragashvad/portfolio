@@ -1,0 +1,18 @@
+<h1>Skills</h1>
+<mat-card>
+    <mat-card-content>
+        <div *ngFor="let item of skills">
+            <div fxFlex="column" class="skill-container">
+                <div fxLayout="row" fxLayoutAlign="space-between center" style="padding-bottom: 5px;">
+                    <div class="skill-name">
+                        {{item.name}}
+                    </div>
+                    <div>
+                        {{item.percentage}}%
+                    </div>
+                </div>
+                <mat-progress-bar mode="determinate" [value]="item.percentage"></mat-progress-bar>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>

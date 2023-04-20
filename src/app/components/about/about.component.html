@@ -1,0 +1,27 @@
+<mat-card>
+
+    <mat-card-content>
+        <div fxLayout="row">
+            <div fxFlex="50%" style="padding:10px">
+                <h1>About</h1>
+                <p class="content">
+                    Looking forward to an opportunity to work in a professional
+                    environment that encourages innovative thinking, recognition and
+                    career development, where my interpersonal skills and professional
+                    skills of Ad Operations/Pre-Sales/Business Development ( 2 years of
+                    experience ) is utilized resourcefully, contributing to the growth of the
+                    organization and my career as well.
+                </p>
+            </div>
+            <div fxFlex="50%" style="padding:10px">
+                <h1>Basic Information</h1>
+                <div *ngFor="let item of basicInfo">
+                    <div fxLayout="row" style="padding:10px;">
+                        <div fxFlex="50%" class="text-uppercase"> {{item.id}} :</div>
+                        <div fxFlex="50%"> {{item.value}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>

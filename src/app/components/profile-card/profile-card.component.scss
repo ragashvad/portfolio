@@ -29,29 +29,34 @@
   width: 204px;
   padding: 0;
   margin: 0;
-  border: 15px solid transparent;
   z-index: 9999;
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
+
+@media screen and (max-width: 768px) {
+  .cc-profile-image img {
+    position: relative;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    padding: 0;
+    margin: 0;
+    z-index: 9999;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+  }
+
+  .page-title {
+    margin-top: 10px;
+  }
+
+  .page-subtitle {
+    margin: 5px;
+  }
+}
 .cc-profile-image a {
   position: relative;
-}
-
-.cc-profile-image a:before {
-  content: "";
-  border: 15px solid rgba(55, 140, 63, 0.6);
-  border-radius: 50%;
-  height: 180px;
-  width: 180px;
-  position: absolute;
-  left: 0;
-  -webkit-animation: pulsate 1.6s ease-out;
-  animation: pulsate 1.6s ease-out;
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-  opacity: 0;
-  z-index: 99;
 }
 
 .button-container {
@@ -68,4 +73,8 @@
   position: absolute;
   bottom: 0;
   margin-top: -106px;
+}
+.hire-me {
+  color: #ffffff;
+  text-decoration: none;
 }

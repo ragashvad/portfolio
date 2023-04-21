@@ -13,6 +13,7 @@ import { ExperienceComponent } from './components/experience/experience.componen
 import { SkillsComponent } from './components/skills/skills.component';
 import { EducationComponent } from './components/education/education.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,9 +29,7 @@ import { EducationComponent } from './components/education/education.component';
     AppRoutingModule,
     FlexLayoutModule,
     MaterialModule,
-    BrowserAnimationsModule
-
-
+    BrowserAnimationsModule,
 
   ],
   providers: [],

@@ -1,15 +1,15 @@
 <h1>Education</h1>
 <mat-card>
     <mat-card-content>
-        <div fxFlex="row">
-            <div fxFlex="30%" class="year-container" style="padding:20px">
+        <div fxFlex="column" fxFlex.gt-xs="row">
+            <div fxFlex.gt-xs="30%" class="year-container" style="padding:20px">
                 <div fxFlex="column">
                     <div class="card-item">{{education.year}}</div>
                     <div class="card-item">{{education.degree}}</div>
                 </div>
 
             </div>
-            <div fxFlex="70%" style="padding:20px" class="college-container">
+            <div fxFlex.gt-xs="70%" style="padding:20px" class="college-container">
                 <div fxFlex="column">
                     <div class="card-item">{{education.college}}</div>
                     <div class="card-item">{{education.course}}</div>

@@ -35,13 +35,13 @@ body {
   padding: 5px 15px;
   border-radius: 5px;
 }
-.mat-sidenav-container .mat-sidenav nav a:hover {
-  color: yellow;
-}
-.mat-sidenav-container .mat-sidenav nav a.active {
-  color: yellow;
-  background-color: rgba(0, 0, 0, 0.2);
-}
+// .mat-sidenav-container .mat-sidenav nav a:hover {
+//   color: yellow;
+// }
+// .mat-sidenav-container .mat-sidenav nav a.active {
+//   color: yellow;
+//   background-color: rgba(0, 0, 0, 0.2);
+// }
 
 .mat-sidenav-container .mat-sidenav-content .mat-toolbar {
   height: 40px;
@@ -71,13 +71,13 @@ body {
   font-size: 1rem;
 }
 
-.mat-sidenav-container .mat-sidenav-content .mat-toolbar header nav a:hover {
-  color: yellow;
-}
-.mat-sidenav-container .mat-sidenav-content .mat-toolbar header nav a.active {
-  color: yellow;
-  background-color: rgba(0, 0, 0, 0.2);
-}
+// .mat-sidenav-container .mat-sidenav-content .mat-toolbar header nav a:hover {
+//   color: yellow;
+// }
+// .mat-sidenav-container .mat-sidenav-content .mat-toolbar header nav a.active {
+//   color: yellow;
+//   background-color: rgba(0, 0, 0, 0.2);
+// }
 
 @media screen and (max-width: 1023px) {
   .mat-sidenav-container .mat-sidenav-content .mat-toolbar {

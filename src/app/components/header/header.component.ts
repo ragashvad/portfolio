@@ -1,5 +1,7 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+
+import { Component, Inject, OnInit, ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
+
 
 @Component({
   selector: 'app-header',
@@ -7,7 +9,8 @@ import { MatSidenav } from '@angular/material/sidenav';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  // @ViewChild('sidenav') sidenav: MatSidenav;
+  @ViewChild('sidenav') sidenav: MatSidenav;
+
 
   constructor() { }
 
@@ -15,7 +18,11 @@ export class HeaderComponent implements OnInit {
   }
 
   clickHandler() {
-    // this.sidenav.close();
+    this.sidenav.close();
+  }
+
+  scroll(el: HTMLElement) {
+    el.scrollIntoView({ behavior: 'smooth' });
   }
 
 }

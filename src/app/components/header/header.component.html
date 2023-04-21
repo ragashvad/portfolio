@@ -1,14 +1,14 @@
 <mat-sidenav-container>
 
     <mat-sidenav #sidenav mode="over">
-        <label>My Application</label>
+        <label>My Portfolio</label>
         <hr />
         <nav>
-            <a routerLink="home" (click)="clickHandler()" routerLinkActive="active">Home</a>
-            <a routerLink="about" (click)="clickHandler()" routerLinkActive="active">About</a>
-            <a routerLink="login" (click)="clickHandler()" routerLinkActive="active">Login</a>
-            <a routerLink="sign-up" (click)="clickHandler()" routerLinkActive="active">Sign Up</a>
-            <a routerLink="contact" (click)="clickHandler()" routerLinkActive="active">Contact</a>
+            <a (click)="clickHandler();scroll(home)" routerLinkActive="active">Home</a>
+            <a (click)="clickHandler();scroll(about)" routerLinkActive="active">About</a>
+            <a (click)="clickHandler();scroll(experience)" routerLinkActive="active">Experience</a>
+            <a (click)="clickHandler();scroll(skills)" routerLinkActive="active">Skills</a>
+            <a (click)="clickHandler();scroll(education)" routerLinkActive="active">Education</a>
         </nav>
     </mat-sidenav>
 
@@ -18,20 +18,33 @@
                 <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
                 <label>My Portfolio</label>
                 <nav>
-                    <a routerLink="home" routerLinkActive="active">Home</a>
-                    <a routerLink="about" routerLinkActive="active">About</a>
-                    <a routerLink="login" routerLinkActive="active">Experience</a>
-                    <a routerLink="sign-up" routerLinkActive="active">Skills</a>
-                    <a routerLink="contact" routerLinkActive="active">Education</a>
+                    <a (click)="scroll(home)">Home</a>
+                    <a (click)="scroll(about)">About</a>
+                    <a (click)="scroll(experience)">Experience</a>
+                    <a (click)="scroll(skills)">Skills</a>
+                    <a (click)="scroll(education)">Education</a>
                 </nav>
             </header>
         </mat-toolbar>
         <section style="padding-bottom:25px">
-            <app-profile-card></app-profile-card>
-            <app-about></app-about>
-            <app-experience></app-experience>
-            <app-skills></app-skills>
-            <app-education></app-education>
+            <div #home>
+                <app-profile-card></app-profile-card>
+            </div>
+
+            <div #about>
+                <app-about></app-about>
+            </div>
+            <div #experience>
+                <app-experience></app-experience>
+            </div>
+            <div #skills>
+                <app-skills></app-skills>
+            </div>
+
+            <div #education>
+                <app-education></app-education>
+            </div>
+
             <router-outlet></router-outlet>
         </section>
     </mat-sidenav-content>

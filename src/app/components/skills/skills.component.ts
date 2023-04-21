@@ -13,7 +13,7 @@ export class SkillsComponent implements OnInit {
     },
     {
       name: 'Ad traﬃcking',
-      percentage: 40
+      percentage: 80
     },
     {
       name: 'Reporting and Data Management',

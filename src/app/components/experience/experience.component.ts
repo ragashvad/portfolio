@@ -1,9 +1,28 @@
 import { Component, OnInit } from '@angular/core';
+import { trigger, transition, style, animate, query, stagger } from '@angular/animations';
 
 @Component({
   selector: 'app-experience',
   templateUrl: './experience.component.html',
-  styleUrls: ['./experience.component.scss']
+  styleUrls: ['./experience.component.scss'],
+  animations: [
+    trigger('listAnimation', [
+      transition('* => *', [ // each time the binding value changes
+        query(':leave', [
+          stagger(100, [
+            animate('0.5s', style({ opacity: 0 }))
+          ])
+        ], { optional: true }),
+        query(':enter', [
+          style({ opacity: 0 }),
+          stagger(2000, [
+            animate('0.5s', style({ opacity: 1 }))
+          ])
+        ], { optional: true })
+      ])
+    ])
+  ],
+
 })
 export class ExperienceComponent implements OnInit {
 
@@ -35,9 +54,15 @@ export class ExperienceComponent implements OnInit {
 
   ]
 
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+
+  logAnimation(_event: any) {
+    console.log(_event)
   }
 
 }

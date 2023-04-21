@@ -6,9 +6,14 @@
                 <h2>{{entry.company}}</h2>
                 <h2>{{entry.role}}</h2>
                 <h2>{{entry.year}}</h2>
-                <ul *ngFor="let item of entry.detail">
-                    <li>{{item}}</li>
-                </ul>
+
+                <div [@listAnimation]="entry.detail.length" (@listAnimation.start)="logAnimation($event)"
+                    (@listAnimation.done)="logAnimation($event)">
+                    <ul *ngFor="let item of entry.detail">
+                        <li>{{item}}</li>
+                    </ul>
+                </div>
+
             </div>
         </div>
     </div>

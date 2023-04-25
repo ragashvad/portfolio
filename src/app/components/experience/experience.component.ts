@@ -62,7 +62,7 @@ export class ExperienceComponent implements OnInit {
 
 
   logAnimation(_event: any) {
-    console.log(_event)
+    // console.log(_event)
   }
 
 }

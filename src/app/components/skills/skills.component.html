@@ -1,7 +1,7 @@
 <h1>Skills</h1>
 <mat-card>
     <mat-card-content>
-        <div *ngFor="let item of skills">
+        <div *ngFor="let item of skills; index as i">
             <div fxFlex="column" class="skill-container">
                 <div fxLayout="row" fxLayoutAlign="space-between center" style="padding-bottom: 5px;">
                     <div class="skill-name">
@@ -11,7 +11,9 @@
                         {{item.percentage}}%
                     </div>
                 </div>
-                <mat-progress-bar mode="determinate" [value]="item.percentage"></mat-progress-bar>
+                <!-- <mat-progress-bar mode="determinate" [value]="item.percentage"></mat-progress-bar> -->
+                <mat-progress-bar mode="determinate" [value]="loadingPercent[i]" (animationEnd)="progressInLoading(i)">
+                </mat-progress-bar>
             </div>
         </div>
     </mat-card-content>
